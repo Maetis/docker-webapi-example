@@ -5,6 +5,6 @@ EXPOSE 8080
 RUN mkdir -p /usr/src/app/webapi
 WORKDIR /usr/src/app/webapi
 
-COPY ./bin/release /usr/src/app/webapi
+COPY ./bin/Release /usr/src/app/webapi
 
 CMD ["mono", "./Poc.Docker.OrderApi.exe"]
