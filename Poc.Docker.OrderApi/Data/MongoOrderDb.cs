@@ -29,6 +29,7 @@ namespace Poc.Docker.OrderApi.Data
         {
             Console.WriteLine("DEBUG : Enter in ** InsertOrder ** method");
             string id = Guid.NewGuid().ToString();
+            if (order == null) Console.WriteLine("Order object is NULL !!");
             order.Id = id;
             Console.WriteLine("DEBUG : Try to insert order");
             await _collection.InsertOneAsync(order);
